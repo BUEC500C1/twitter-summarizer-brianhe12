@@ -1,9 +1,9 @@
-import tweepy
-from dotenv import load_dotenv
-import os
-
 def print_feed(twitter_handle,numTweets):
-    # Tweepy
+    import tweepy
+    import google_api
+    from dotenv import load_dotenv
+    import os
+
     load_dotenv()
 
     auth = tweepy.OAuthHandler(os.getenv("CONSUMER_KEY"), os.getenv("CONSUMER_SECRET"))
@@ -25,8 +25,9 @@ def print_feed(twitter_handle,numTweets):
 
     print('---------------------------------\n')
 
-    # Print all media
+    # Print all media and descriptions
     for media in media_files:
         print(media)
+        google_api.detect_labels_uri(media)
 
     
