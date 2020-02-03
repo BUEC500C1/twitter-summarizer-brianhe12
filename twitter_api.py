@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import os
 
 def print_feed(twitter_handle,numTweets):
+    # Tweepy
     load_dotenv()
 
     auth = tweepy.OAuthHandler(os.getenv("CONSUMER_KEY"), os.getenv("CONSUMER_SECRET"))
@@ -18,7 +19,6 @@ def print_feed(twitter_handle,numTweets):
 
     for tweet in public_tweets:
         print(tweet.text)
-        print('\n')
         media = tweet.entities.get('media', [])
         if(len(media) > 0):
             media_files.add(media[0]['media_url'])
@@ -28,3 +28,5 @@ def print_feed(twitter_handle,numTweets):
     # Print all media
     for media in media_files:
         print(media)
+
+    
