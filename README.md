@@ -21,3 +21,4 @@ google_twitter_api.api_print("kobebryant",10)
 This function call will print out the 10 most recent tweets of [@kobebryant](https://twitter.com/kobebryant) and use Google's Vision API to analyze any images in those tweets.
 
 ### Example Output
+<img src = "example_output.JPG">
