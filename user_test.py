@@ -1,5 +1,8 @@
 import google_twitter_api 
 
 def test():
-    assert 1 == 1
-    
+    try:
+        google_twitter_api.api_print("FloodSocial",10)
+        assert True
+    except:
+        assert False
