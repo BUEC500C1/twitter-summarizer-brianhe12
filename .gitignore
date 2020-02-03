@@ -1,2 +1,3 @@
 #DOTENV
 *.env
+*.json
