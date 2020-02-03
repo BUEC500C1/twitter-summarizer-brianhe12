@@ -23,8 +23,9 @@ def detect_labels_uri(uri):
                 score=label.score,
                 topicality=label.topicality
             ), ignore_index=True)
-        
+            
     print(df)
+    print('\n')
 
     if response.error.message:
         raise Exception(

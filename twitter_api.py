@@ -17,17 +17,19 @@ def print_feed(twitter_handle,numTweets):
     # Images
     media_files = set()
 
+    print('\033[95m' + '@' + twitter_handle + '\033[0m')
     for tweet in public_tweets:
         print(tweet.text)
+        print('\033[92m' + '----------' + '\033[0m')
         media = tweet.entities.get('media', [])
         if(len(media) > 0):
             media_files.add(media[0]['media_url'])
 
-    print('---------------------------------\n')
-
     # Print all media and descriptions
+    if len(media_files):
+        print('Images/Analysis below')
     for media in media_files:
-        print(media)
+        print('\033[95m' + media + '\033[0m')
         google_api.detect_labels_uri(media)
 
     
