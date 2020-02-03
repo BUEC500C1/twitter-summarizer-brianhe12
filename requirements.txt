@@ -1,4 +1,4 @@
 tweepy==3.8.0
 python-dotenv==0.10.5
 google-cloud-vision==0.41.0
-pandas==1.0.0
+pandas
