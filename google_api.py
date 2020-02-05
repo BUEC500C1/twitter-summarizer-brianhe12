@@ -5,7 +5,7 @@ def detect_labels_uri(uri):
     import pandas as pd
     import os
 
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'SA_Token.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'SA_Token.json'
     client = vision.ImageAnnotatorClient()
     image = vision.types.Image()
     image.source.image_uri = uri
